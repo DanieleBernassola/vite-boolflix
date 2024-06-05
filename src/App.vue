@@ -1,6 +1,24 @@
-<script></script>
+<script>
+import axios from 'axios';
+import SearchComponent from './components/SearchComponent.vue';
+import AppMain from './components/AppMain.vue';
+import { store } from './store';
+export default {
+  name: 'AppComponent',
+  data() {
+    return {
+      store
+    }
+  },
+  components: {
+    SearchComponent,
+    AppMain
+  }
+}
+</script>
 <template>
-  <h1>Vue Vite Template</h1>
-  <p>Template per progetti Vue con Vite</p>
+  <h1>Boolflix</h1>
+  <searchComponent></searchComponent>
+  <AppMain></AppMain>
 </template>
 <style></style>
