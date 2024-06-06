@@ -17,11 +17,11 @@ export default {
       axios.get(this.store.apiInfo.apiUrl, {
         params,
       }
-        // params: {
-        //   api_key: this.store.apiInfo.apiKey,
-        //   query: this.store.apiInfo.searchQuery,
-        // },
-      ).then(response => console.log(response.data)).catch(error => console.log(error))
+      ).then(response => {
+        console.log(response.data.results),
+          store.apiInfo.movies.push(response.data.results),
+          console.log(store.apiInfo.movies)
+      }).catch(error => console.log(error))
     }
   }
 }

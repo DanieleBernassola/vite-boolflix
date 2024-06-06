@@ -6,7 +6,6 @@ export default {
   name: 'AppComponent',
   data() {
     return {
-      movies: [],
       store,
     }
   },
