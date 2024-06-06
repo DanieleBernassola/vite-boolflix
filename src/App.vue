@@ -20,4 +20,8 @@ export default {
   <searchComponent></searchComponent>
   <AppMain></AppMain>
 </template>
-<style></style>
+<style>
+* {
+  margin-left: 0.25rem;
+}
+</style>
