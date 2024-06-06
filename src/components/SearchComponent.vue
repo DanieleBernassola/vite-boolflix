@@ -19,8 +19,10 @@ export default {
       }
       ).then(response => {
         console.log(response.data.results),
-          store.apiInfo.movies.push(response.data.results),
-          console.log(store.apiInfo.movies)
+          response.data.results.forEach(result => {
+            this.store.apiInfo.movies.push(result);
+          });
+        console.log(this.store.apiInfo.movies)
       }).catch(error => console.log(error))
     }
   }
