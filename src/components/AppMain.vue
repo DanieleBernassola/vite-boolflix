@@ -10,6 +10,8 @@ export default {
 }
 </script>
 <template>
-  main
+  <ul>
+    <li></li>
+  </ul>
 </template>
 <style></style>

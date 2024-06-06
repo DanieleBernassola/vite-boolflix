@@ -1,5 +1,4 @@
 <script>
-import axios from 'axios';
 import SearchComponent from './components/SearchComponent.vue';
 import AppMain from './components/AppMain.vue';
 import { store } from './store';
@@ -7,7 +6,8 @@ export default {
   name: 'AppComponent',
   data() {
     return {
-      store
+      movies: [],
+      store,
     }
   },
   components: {
