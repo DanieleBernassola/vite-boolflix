@@ -1,4 +1,5 @@
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { store } from '../store';
 export default {
   name: 'AppMain',
@@ -27,6 +28,8 @@ export default {
       <img v-else-if="movie.original_language === 'en'" src="/img/england.jpg" alt="england" class="language"></img>
       <p v-else>{{ movie.original_language }}</p>
       <p class="mb-1">{{ roundVoteAverage(movie.vote_average) }}</p>
+      <font-awesome-icon icon="fa-solid fa-star"></font-awesome-icon>
+      <font-awesome-icon icon="fa-regular fa-star"></font-awesome-icon>
     </li>
   </ul>
   <!-- LISTA PER SERIE -->
@@ -40,6 +43,8 @@ export default {
       <img v-else-if="serie.original_language === 'en'" src="/img/england.jpg" alt="england" class="language"></img>
       <p v-else>{{ serie.original_language }}</p>
       <p class="mb-1">{{ roundVoteAverage(serie.vote_average) }}</p>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-regular fa-star"></i>
     </li>
   </ul>
 </template>
