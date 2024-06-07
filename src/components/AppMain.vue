@@ -7,6 +7,12 @@ export default {
       store
     }
   },
+  // FUNZIONE CHE ARROTONDA IN ECCESSO IL VOTO MEDIO
+  methods: {
+    roundVoteAverage: (vote) => {
+      return Math.ceil((vote / 10) * 5);
+    }
+  }
 }
 </script>
 <template>
@@ -20,7 +26,7 @@ export default {
       <img v-if="movie.original_language === 'it'" src="/img/italy.jpeg" alt="italy" class="language"></img>
       <img v-else-if="movie.original_language === 'en'" src="/img/england.jpg" alt="england" class="language"></img>
       <p v-else>{{ movie.original_language }}</p>
-      <p class="mb-1">{{ movie.vote_average }}</p>
+      <p class="mb-1">{{ roundVoteAverage(movie.vote_average) }}</p>
     </li>
   </ul>
   <!-- LISTA PER SERIE -->
@@ -33,7 +39,7 @@ export default {
       <img v-if="serie.original_language === 'it'" src="/img/italy.jpeg" alt="italy" class="language"></img>
       <img v-else-if="serie.original_language === 'en'" src="/img/england.jpg" alt="england" class="language"></img>
       <p v-else>{{ serie.original_language }}</p>
-      <p class="mb-1">{{ serie.vote_average }}</p>
+      <p class="mb-1">{{ roundVoteAverage(serie.vote_average) }}</p>
     </li>
   </ul>
 </template>
