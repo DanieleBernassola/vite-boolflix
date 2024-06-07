@@ -10,7 +10,7 @@ export default {
   // FUNZIONE CHE ARROTONDA IN ECCESSO IL VOTO MEDIO
   methods: {
     roundVoteAverage: (vote) => {
-      return Math.ceil((vote / 10) * 5);
+      return Math.ceil(vote / 2);
     }
   }
 }
